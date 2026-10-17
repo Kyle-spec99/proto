@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Knozen AI — Turn your PDFs into study material</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  </head>
+  <body>
+    <header id="topbar" class="topbar hidden">
+      <div class="topbar-inner">
+        <a href="#/home" class="brand">
+          <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><path d="M8.5 11.5c4.8-.9 8.5-.1 11.5 2.5v16c-3-2.5-6.7-3.4-11.5-2.5v-16Z" fill="currentColor" fill-opacity=".96"/><path d="M31.5 11.5c-4.8-.9-8.5-.1-11.5 2.5v16c3-2.5 6.7-3.4 11.5-2.5v-16Z" fill="currentColor" fill-opacity=".72"/><path d="M20 14v16" stroke="#24675F" stroke-width="1.4"/><path d="M29 7V3.5M32.5 10.5H36M31.5 8l2.4-2.4" stroke="#F6C66A" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+          <span class="brand-name">Knozen AI</span>
+        </a>
+        <nav class="mainnav" id="mainnav">
+          <a href="#/home" data-nav="home">Home</a>
+          <a href="#/library" data-nav="library">Library</a>
+          <a href="#/upload" data-nav="upload">Upload</a>
+          <a href="#/plans" data-nav="plans">Plans</a>
+          <a href="#/profile" data-nav="profile">Profile</a>
+        </nav>
+        <div class="topbar-user">
+          <span class="token-chip" id="token-chip" title="Study tokens"></span>
+          <button class="theme-btn" onclick="toggleTheme()" aria-label="Toggle dark mode">◐</button>
+          <button class="btn btn-ghost btn-sm" onclick="App.logout()">
+            Log out
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="app" class="app"></main>
+
+    <nav id="bottomnav" class="bottomnav hidden">
+      <a href="#/home" data-nav="home"
+        ><span class="bn-ico">&#8962;</span>Home</a
+      >
+      <a href="#/library" data-nav="library"
+        ><span class="bn-ico">&#9776;</span>Library</a
+      >
+      <a href="#/upload" data-nav="upload" class="bn-upload"
+        ><span class="bn-ico">&#8679;</span>Upload</a
+      >
+      <a href="#/plans" data-nav="plans"
+        ><span class="bn-ico">&#9733;</span>Plans</a
+      >
+      <a href="#/profile" data-nav="profile"
+        ><span class="bn-ico">&#9786;</span>Profile</a
+      >
+    </nav>
+
+    <script src="app.js"></script>
+  </body>
+</html>
